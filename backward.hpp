@@ -1750,7 +1750,7 @@ public:
 			}
 			return os;
 		}
-private:
+public:
 	TraceResolver  _resolver;
 	SnippetFactory _snippets;
 
@@ -1821,7 +1821,7 @@ private:
 			} else {
 				fprintf(os, "%s ", indent);
 			}
-			fprintf(os, "%4u: %s\n", it->first, it->second.c_str());
+			fprintf(os, "%4u: %.106s\n", it->first, it->second.c_str());
 			if (it-> first == source_loc.line) {
 				colorize.set_color(Color::reset);
 			}
